@@ -51,6 +51,6 @@
 
 *) Resistors "LED1" - "LED3" are pull-down resistors for the 20 LEDs.
 The resistor values depend on the used LEDs and the desired brightness.
-The row of LEDs is divided in 4 groups, each with 5 LEDs, representing the CV level allpied to the VCA for each oscillator section above the LEDs.
-I chose the values in a way that the central of those 5 LEDs is the brightest (resistors "LED1"), the 2 LEDs next to it are a bit less bright (resistors "LED2"), and the 2 next to those are the least bright ones (resistors "LED3").
-The values for that effect for my blue LEDs 
+The row of LEDs is divided in four groups, each with five LEDs, representing the CV level applied to the VCA for each oscillator section above the LEDs.
+I chose the values in a way that the central LED of each group is the brightest (resistors "LED1"), the two LEDs next to it are a bit less bright (resistors "LED2"), and the two next to those are the least bright ones (resistors "LED3").
+The values for that effect with blue LEDs in my module are: LED1 = 47K, LED2 = 100K, LED3 = 470K. 
