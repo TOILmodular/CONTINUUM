@@ -9,10 +9,10 @@ This Eurorack module provides a drone from four oscillators with volume modulati
 
 
 #### Features
-- 4 separate oscillator segments
+- Four separate oscillator segments
 - Triangle or squarewave selection
-- 3 different volume modulation options - external, internal (irregular, cyclic via LFO combinations), or touch pads at the front panel
-- Simple low-pass filter function for squarewave mode for morphing between square and fin waveform
+- Three different volume modulation options - external, internal (irregular, cyclic via LFO combinations), or touch pads at the front panel
+- Simple low-pass filter function for squarewave mode for morphing between square and shark fin waveform
 - Volume control for the summed up output signal
 
 A demo of the module is available in this YouTube video:
@@ -20,67 +20,59 @@ A demo of the module is available in this YouTube video:
 [<img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/70f6cd10-a251-469a-80bf-59df53929b95">](https://youtu.be/kjN41rJ36m0)
 
 ## How the Module works
-The module usage is straight forward. There are 4 separate oscillators with the same layout. The waveform can be selected separately for each oscillator, either triangle or squarewave. 
+The four oscillator sections are identical.
 
-#### IN
-The input signals can come from any type of signal, audio or other CV sources.
-An internal feedback connection from the two shift registers via several CD4030 XOR gates is fed into each input, if no cable is plugged in.
-So the module does not depend on any external input.
+#### FREQUENCY
+The FREQUENCY knob determines the pitch of each oscillator.
+This is a simple drone module with no CV for the pitch.
 
-The feedback logic is slightly different for each input in a way that the bits compared are derived from different shift register stages.
-The resulting pattern from having both feedback loops as the only source (no external signals) is repeating after a number of steps and sometimes showing slight deviations.
-That is just my observation. One might find the reason for it by checking the feedback loop logic in detail. I didn't do that. I just fiddled around with different feedback options during the module design phase.
+#### Waveform Switch
+There are two options for each oscillator's waveform via the toggle switch next to the FREQUENCY knob - triangle or squarewave.
 
-#### CLOCK
-The module requires a clock signal (>1V) to output new CV values. 
+#### CV Controls
+The module contains a quad VCA for modulating the volume of each oscillator. There are three CV options for each VCA.
+The options for internal and touch pad modulation can be selected via a toggle switch.
+Positioning the switch at the center interrupts any modulation signal to be sent from internal or touch pad to the VCA.
 
-#### STOP
-If there is a cable plugged into the STOP input, the CV outputs will only change to new values, if the input is high (>1V), otherwise the change of CV outputs will stop.
+##### Internal CV
+The module provides an internal modulation of each VCA via four internal LFOs, which are being combined differently for each oscillator and used for the volume modulation.
+Therefore, those modulations are irregular but cyclic.
 
-Due to some reason which I did not yet find out, the constellation of active and inactive stages changes, when sending a high signal to the STOP input, compared to the stopped pattern. Sometimes, this results in the deactivation of all stages (all LEDs off) and no further movement. In that case, just press the ADD button to add a new high value to the first stage to ignite a new pattern.
+##### Touch Pads
+There are two touch pad sections at the bottom of front panel, which are based on a simple mechanism using the conductivity of fingers placed on the pads. Select that option for an oscillator by pushing the related toggel switch down. The pads are also slightly pressure sensitive. So the CV level can be controlled by pressure, but also by the size of the area covered by the fingers. The set of pads on the left are controlling the left two oscillators, the pads on the right are for the other two oscillators on the right.
 
-Consider this bug as an additional feature of chaos.
+##### Internal Modulation
+Pushing the modulation option switch up, will cause the VCA of the related oscillator volume to be modulated by a certail pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator.
 
-#### ADD and DEL
-When pressing the ADD button, and as long as it is kept pressed, the first stage of the shift register will be set to high with each trigger signal into the clock input (provided the sequence is not stopped by a low signal in the STOP input).
+##### External CV
+There is a CV input for each oscillator section. Touch pad and internal CV are normalled to this input. I.e. as long as there is a cable plugged in to the CV input, the only VCA modulation will be from an external source.
 
-Same for the DEL button, except that the first stage will be set to low.
+#### BIAS
+The BIAS knob provides a CV offset option for the VCA modulation. This is applied to any of the above described options.
+You can turn down the output from any oscillator separately with the BIAS turned to minimum and no CV signal added.
 
-#### Lock Switch
-When pushing the switch at the LED field center to the left, the current 16 stages are being locked and the 16-step sequence of CV values will be looped.
-Influencing the sequence via the ADD and DEL buttons is still possible in this mode.
+#### FILTER
+The FILTER knob is only functional in case the selected waveform of an oscillator is the squarewave. In that case, it is serving as a simple low-pass filter, morphing the squarewave into a shark fin.
 
-As soon as the switch is pushed to the right, the 16 stages are being changed again depending on the input signals (external or internal).
+#### VOLUME
+The volume knob is controlling the overall amplitude of the combined drone output.
 
-#### PORTAMENTO
-The PORTAMENTO knobs do what they are expected to do, i.e. smoothing out the shift from one CV value to the next.
-Those controls are independent for each of the four channels.
-
-#### ATTENUATOR
-
-Attenuating a CV output with the related ATTENUATOR knob does not simply reduce all output values from that channel. Due to the uneven probability distribution of possible CV values, as mentioned above, attenuating an output shifts the entire probability distribution to lower values, like squeezing the probability curve with 12 discrete values to a narrower voltage range.
-
-## Some Suggestions about how to use the Module
-- The module has the tendency to lock the CV value changes to certain patterns. This can be interrupted by playing around with the ADD and DEL buttons.
-- The module invites to use it interactively by adding and deleting single bits or a series of bits (high or low). The outcome can be quite chaotic, and sometines the module returns back to a previous repetition.
-- Also the interactive use of the attentuators has quite some influence on CV output probabilities due to the facts described above.
-- Changes or repetitions can nicely be observed in the LED field. You can get a general impression if the module tends to higher or lower CV output values (more or fewer LEDs lit). Depending on that, you can add or delete some bits.
-- If the left IN signal is higher than the right one at the time of a trigger from the CLOCK input, the first bit of the shift register will be set to high. If the right IN signal is higher, it will be set to low. Keeping that in mind, you can experiment with different input signals on each side - noise, audio, LFO, CV, trigger, internal feedback.
-- You can also just enjoy observing the dancing LEDs and changing patterns.
+#### OUT
+The combined output of all four oscillators.
 
 ## Module Build and PCBs
 I added two different versions for the control board in the folder GerberFiles, an "original", and a "Thonk" version.
 Reason is that for my own module, I am using specific potentiometers - 16K4 series from Supertech Electronics - and 3.5mm jack sockets - MJ-355 from Marushin - available at my local electronics shop.
 
-<img width="300" alt="CtrlPCB_Orig" src="https://github.com/TOILmodular/GARGLER/assets/97026614/a8fbc0af-805f-4c7b-9b86-065e128c370f">
+<img width="300" alt="CtrlPCB_Orig" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/dc18885e-3439-4b7f-a738-9cde5bdc44a2">
 
 However, since most DIY projects for Eurorack modules out there are using potentiometers from ALPHA and so-called THONKICONN jacks, as they are provided by Thonk in the UK, I also created another control board PCB for the "Thonk" version with footprints for those components.
 
-<img width="300" alt="CtrlPCB_Thonk" src="https://github.com/TOILmodular/GARGLER/assets/97026614/172d28bf-8240-41f0-a2d5-ef757705ce10">
+<img width="300" alt="CtrlPCB_Thonk" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/6617db9b-e79d-4699-a843-b4237903a712">
 
 The main PCB is the same for both versions.
 
-<img width="300" alt="MainPCB" src="https://github.com/TOILmodular/GARGLER/assets/97026614/e4118d6f-81de-4b8a-8c81-1f80d62421d3">
+<img width="300" alt="MainPCB" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/516773c2-40f5-4bf4-808b-1cef77f619c8">
 
 I created the Gerber files with the online tool EasyEDA and ordered the PCBs at JLCPCB.
 
