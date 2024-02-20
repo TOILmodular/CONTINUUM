@@ -34,15 +34,11 @@ The module contains a quad VCA for modulating the volume of each oscillator. The
 The options for internal and touch pad modulation can be selected via a toggle switch.
 Positioning the switch at the center interrupts any modulation signal to be sent from internal or touch pad to the VCA.
 
-##### Internal CV
-The module provides an internal modulation of each VCA via four internal LFOs, which are being combined differently for each oscillator and used for the volume modulation.
-Therefore, those modulations are irregular but cyclic.
-
 ##### Touch Pads
 There are two touch pad sections at the bottom of front panel, which are based on a simple mechanism using the conductivity of fingers placed on the pads. Select that option for an oscillator by pushing the related toggel switch down. The pads are also slightly pressure sensitive. So the CV level can be controlled by pressure, but also by the size of the area covered by the fingers. The set of pads on the left are controlling the left two oscillators, the pads on the right are for the other two oscillators on the right.
 
 ##### Internal Modulation
-Pushing the modulation option switch up, will cause the VCA of the related oscillator volume to be modulated by a certail pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator.
+Pushing the modulation option switch up, will cause the VCA of the related oscillator volume to be modulated by a certain pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator.
 
 ##### External CV
 There is a CV input for each oscillator section. Touch pad and internal CV are normalled to this input. I.e. as long as there is a cable plugged in to the CV input, the only VCA modulation will be from an external source.
