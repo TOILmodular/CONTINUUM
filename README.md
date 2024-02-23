@@ -98,7 +98,7 @@ The socket legs need to be soldered to the PCB surface, like SMD components.
 
 In order to do that, you need to use the type of socket, where the legs can be bent, NOT the one with stiff round legs!
 
-<img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/440ea4bd-f64a-49aa-b3e9-e93ae8265c44">
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/ea45e92a-d801-4a7b-8da7-29c2ab92915d">
 
 All socket legs need to be bent to the outside, so they can be put flat onto the PCB. Soldering the socket to the board is very easy, since the legs and the space inbetween are big compared to real SMD components.
 
