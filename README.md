@@ -72,33 +72,37 @@ The main PCB is the same for both versions.
 
 I created the Gerber files with the online tool EasyEDA and ordered the PCBs at JLCPCB.
 
-## Panel Layout
-I added the information about hole coordinates for the front panel in the folder PanelLayout, referring to the component layout in the PCB Gerber files.
+## Panel and Touch Pad Connections
+One thing unusual about this module is the integration of touch pads into the front panel for modulating the amount of CV to the VCA and therefore the volume for each oscillator.
 
-In addition, there is another Gerber file for the panel, following the HP standard. My own modules do not follow that width standard, as I am only using sliding nuts in my racks.
+Those touch pads are basically just several SMD-type solder areas connected to traces in the panel, which is actually a PCB.
+Therefore, this module requires a front panel manufactured as a PCB.
+The Gerber file for that panel is available in the GerberFiles folder.
 
-You can use the panel Gerber file to have the panel built out of PCB material.
+The connections for each touch pad with the control PCB are at the panel backside.
+In order to connect them to the control board, you have to use a 1x5 l-shaped male header, soldered on the backside surface and fitting to a corresponding 1x5 female header on the control board.
+The way and sequence of soldering these parts is explained in the YouTube video linked above.
 
 ## Additional Information about specific Components
 The module build is mainly THT, including all ICs.
-However, there are a few SMD components if you are using the Gerber files provided.
+However, there are a number SMD capacitors with the package size 1608 (imperial 0603), as well as several NPN transistors MMBT3904 with package size SOT-23-3.
 
-There are a number SMD capacitors with the package size 1608 (imperial 0603), as well as several NPN transistors MMBT3904 with package size SOT-23-3.
+Also one of the IC sockets for the TL071 on the control board needs to be soldered in a specific way, as described in the next section.
 
 Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider that fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
 
-## Soldering ICs on Control Board
-There are three ICs to be soldered on the control board in a special way, although the ones to be used are THT.
-Due to space reasons, there are no holes for the IC sockets.
+## Soldering IC Socket on Control Board
+There is one IC socket to be soldered on the control board in a special way, although the IC itself is THT.
+Due to space reasons, there are no holes for the IC socket.
 The socket legs need to be soldered to the PCB surface, like SMD components.
 
-In order to do that, you need to use those types of sockets, where the legs can be bent, NOT the ones with stiff round legs!
+In order to do that, you need to use the type of socket, where the legs can be bent, NOT the one with stiff round legs!
 
 <img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/440ea4bd-f64a-49aa-b3e9-e93ae8265c44">
 
-All socket legs need to be bent to the outside, so they can be put flat onto the PCB. Soldering a socket to the board is very easy, since the legs and the space inbetween are big compared to real SMD components.
+All socket legs need to be bent to the outside, so they can be put flat onto the PCB. Soldering the socket to the board is very easy, since the legs and the space inbetween are big compared to real SMD components.
 
 <img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/437a25b2-b9cc-4be9-bf65-0ad2c10efac4">
 <img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/31184858-4c74-43f4-b11a-abf582f29de1">
 
-The sockets on the main board are to be soldered the usual THT way.
+All other sockets on the control board and the ones on the main board are to be soldered the usual THT way.
