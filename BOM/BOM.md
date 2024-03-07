@@ -52,7 +52,7 @@ Each LED brightness is defined by three resistors, e.g. R46, R51, and R136 (in t
 
 The resistors connected between the incoming CV signal from the VCA and the LEDs (in the example R46) are given on the control PCB directly above the line of LEDs with values 39K (least bright) - 30K (middle bright) -20K (brightest) - 30K - 39K for one group of five LEDs for one oscillator.
 
-There is another 47K resistor connected between each LED and the 12V power supply (in the example R51).
+There is another 47K resistor connected between each LED and the -12V power supply (in the example R51).
 You will find those resistors on the right side of each LED on the PCB.
 
 Finally, there is one more resistor between each LED and ground (in the example R136).
