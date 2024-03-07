@@ -85,7 +85,7 @@ The way and sequence of soldering these parts is explained in the YouTube video 
 
 ## Additional Information about specific Components
 The module build is mainly THT, including all ICs.
-However, there are a number SMD capacitors with the package size 1608 (imperial 0603), as well as several NPN transistors MMBT3904 with package size SOT-23-3.
+However, there are a number SMD capacitors with the package size 1608 (imperial 0603).
 
 For the "Original" version two of the IC sockets on the control board need to be soldered in a specific way, as described in the next section. For the "Thonk" version, all sockets are to be soldered the usual way.
 
