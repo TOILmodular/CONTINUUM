@@ -25,7 +25,7 @@
 | Capacitor Ceramic | 100pF | 4 | |
 | Diode | 1N5819 | 2 | |
 | Diode | 1N5817 | 4 | |
-| LED | 3mm | 20 | See sectopn "Choice of resistors for LEDs" below |
+| LED | 3mm | 20 | See section "Choice of resistors for LEDs" below |
 | Op Amp | TL074 | 8 | |
 | Op Amp | TL071 | 1 | |
 | Quad VCA | AS2164 or V2164 | 1 | |
