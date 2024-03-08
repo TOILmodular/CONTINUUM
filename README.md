@@ -77,10 +77,10 @@ For the "Original" version two of the IC sockets on the control board need to be
 
 Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider that fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
 
-## Soldering IC Socket on Control Board (only valid for the "Original" PCB version!)
+## Soldering IC Sockets on Control Board (only valid for the "Original" PCB version!)
 The following information is not relevant, if you are using the "Thonk" version PCBs.
 
-There are two IC sockets to be soldered on the control board in a special way, although the ICs itselves are THT.
+There are two IC sockets to be soldered on the control board in a special way, although the ICs themselves are THT.
 Due to space reasons, there are no holes for the IC sockets.
 The socket legs need to be soldered to the PCB surface, like SMD components.
 
