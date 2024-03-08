@@ -1,12 +1,8 @@
 # CONTINUUM - a 4-oscillator drone Eurorack module
 This Eurorack module provides a drone from four oscillators with volume modulation controls for each oscillator via touch pads, internal or external CV.
 
-<img height="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/3fb18a32-90c7-4129-8e60-ad567214e95c">
-<img height="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/2d934e23-873a-4cbc-9ae3-71b2fb08ed65">
-
-<img height="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/121e99c1-6281-40e6-89a4-87d81681f247">
-<img height="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/da834276-f82b-410b-8704-74eb76ab6ea8">
-
+<img height="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/9aa25208-d464-4d61-b3e9-2e5df699201f">
+<img height="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/58ca1409-5d84-451c-b231-6b8a6a3aa704">
 
 #### Features
 - Four separate oscillator segments
@@ -17,7 +13,7 @@ This Eurorack module provides a drone from four oscillators with volume modulati
 
 A demo of the module is available in this YouTube video:
 
-[<img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/70f6cd10-a251-469a-80bf-59df53929b95">](https://youtu.be/kjN41rJ36m0)
+[<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/760888a7-c813-4852-af57-fda0ae9fe85f">](xxx)
 
 ## How the Module works
 The four oscillator sections are identical.
@@ -72,17 +68,6 @@ The main PCB is the same for both versions.
 
 I created the Gerber files with the online tool EasyEDA and ordered the PCBs at JLCPCB.
 
-## Panel and Touch Pad Connections
-One thing unusual about this module is the integration of touch pads into the front panel for modulating the amount of CV to the VCA and therefore the volume for each oscillator.
-
-Those touch pads are basically just several SMD-type solder areas connected to traces in the panel, which is actually a PCB.
-Therefore, this module requires a front panel manufactured as a PCB.
-The Gerber file for that panel is available in the GerberFiles folder.
-
-The connections for each touch pad with the control PCB are at the panel backside.
-In order to connect them to the control board, you have to use a 1x5 L-shaped male header, soldered on the backside surface and fitting to a corresponding 1x5 female header on the control board.
-The way and sequence of soldering these parts is explained in the YouTube video linked above.
-
 ## Additional Information about specific Components
 The module build is mainly THT, including all ICs.
 However, there are a number SMD capacitors with the package size 1608 (imperial 0603).
@@ -92,6 +77,8 @@ For the "Original" version two of the IC sockets on the control board need to be
 Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider that fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
 
 ## Soldering IC Socket on Control Board (only valid for the "Original" PCB version!)
+The following information is not relevant, if you are using the "Thonk" version PCBs.
+
 There are two IC sockets to be soldered on the control board in a special way, although the ICs itselves are THT.
 Due to space reasons, there are no holes for the IC sockets.
 The socket legs need to be soldered to the PCB surface, like SMD components.
@@ -106,3 +93,36 @@ All socket legs need to be bent to the outside, so they can be put flat onto the
 <img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/31184858-4c74-43f4-b11a-abf582f29de1">
 
 All other sockets on the control board and the ones on the main board are to be soldered the usual THT way.
+
+## Front Panel and Touch Pad Connections
+One thing unusual about this module is the integration of touch pads into the front panel for modulating the amount of CV to the VCA and therefore the volume for each oscillator.
+
+Those touch pads are basically just several SMD-type solder areas connected to traces in the panel, which is actually a PCB.
+Therefore, this module requires a front panel manufactured as a PCB, not e.g. a aluminum panel.
+The Gerber file for that panel is available in the GerberFiles folder.
+
+The connections for each touch pad with the control PCB are at the panel backside.
+In order to connect them to the control board, you have to use a 1x5 L-shaped male header, soldered on the backside surface and fitting to a corresponding 1x5 female header on the control board.
+
+I suggest the following sequence for assembling the front panel and all control parts, and soldering the touch pad connections.
+1. Solder the 5-pin female header to the control board.
+<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/e9f8ed89-e014-4bb7-8960-4254276c41e5">
+
+2. Stick on the four ON-ON toggle switches at the upper row of the control board without soldering them.
+3. Stick on the L-shaped male header to the female header on the control board.
+<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/38f72cde-c15b-4752-819f-fe04549c2511">
+
+4. Put on the front panel and fix the four toggle switches with screws to the front panel.
+<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/69aa4c0d-e5ec-44ce-b7de-616c2267384e">
+
+You can see in the picture that the control board and the front panel are not exactly parallel, because the headers connecting the touch pads are slightly higher than the other parts connecting to the front panel.
+
+5. Check the position of the L-shaped header on the backside of the front panel and gently twist the control PCB until the header pins fit to the solder pads.
+   Then solder the header pins to the front panel.
+<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/09f35f1b-4e27-4718-ac10-771c0cfce7b1">
+
+6. Solder the four toggle switches to the control board PCB.
+7. Remove the front panel carefully in order to place all other switches, jacks and pots.
+8. Put the front panel back on, fix and solder all parts.
+
+
