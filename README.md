@@ -10,6 +10,7 @@ This Eurorack module provides a drone from four oscillators with volume modulati
 - Three different volume modulation options - external, internal (irregular, cyclic via LFO combinations), or touch pads at the front panel
 - Simple low-pass filter function for squarewave mode for morphing between square and shark fin waveform
 - Volume control for the summed up output signal
+- Module width 26HP
 
 A demo of the module is available in this YouTube video:
 
