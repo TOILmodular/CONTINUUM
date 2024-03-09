@@ -14,7 +14,7 @@ This Eurorack module provides a drone from four oscillators with volume modulati
 
 A demo of the module is available in this YouTube video:
 
-[<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/e947f7f5-82ba-41df-bce6-fa420f4e8d9f">
+[<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/6f868cc5-263f-4b68-b0da-cafaf97a4cc4">
 
 ## How the Module works
 The four oscillator sections are identical.
