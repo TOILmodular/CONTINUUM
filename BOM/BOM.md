@@ -32,7 +32,7 @@
 | Potentiometer | B100K | 4 | |
 | Potentiometer | B10K | 4 | |
 | Potentiometer | B5K | 4 | |
-| Potentiometer | B1K | 5 | |
+| Potentiometer | B1K | 1 | |
 | Mono Jack | 3.5mm | 5 | |
 | Switch | Toggle SPDT | 4 | ON-ON |
 | Switch | Toggle SPDT | 4 | ON-OFF-ON |
