@@ -8,16 +8,17 @@ This Eurorack module provides a drone from four oscillators with volume modulati
 - Four separate oscillator segments
 - Triangle or squarewave selection
 - Three different volume modulation options - external, internal (irregular, cyclic via LFO combinations), or touch pads at the front panel
-- Simple low-pass filter function for squarewave mode for morphing between square and shark fin waveform
+- Volume indicators via LEDs for each oscillator
+- Simple low-pass filter
 - Volume control for the summed up output signal
 - Module width 26HP
 
 A demo of the module is available in this YouTube video:
 
-[<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/49dcf8b2-ba21-4d22-ade6-f03891f9c837">
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/49dcf8b2-ba21-4d22-ade6-f03891f9c837">
 
 ## How the Module works
-The four oscillator sections are identical.
+The four oscillator sections are identical, except for the internal modulation LFO combinations.
 
 #### FREQUENCY Knob
 The FREQUENCY knob determines the pitch of each oscillator.
@@ -27,45 +28,46 @@ This is a simple drone module with no CV for the pitch.
 There are two options for each oscillator's waveform via the toggle switch next to the FREQUENCY knob - triangle or squarewave.
 
 #### CV Controls
-The module contains a quad VCA for modulating the volume of each oscillator. There are three CV options for each VCA.
+The module contains a quad VCA for modulating the volume of each oscillator. There are three CV options for each oscillator's VCA.
 The options for internal and touch pad modulation can be selected via a toggle switch.
 Positioning the switch at the center interrupts any modulation signal to be sent from internal or touch pad to the VCA.
 
-##### Touch Pads
-There are two touch pad sections at the bottom of front panel, which are based on a simple mechanism using the conductivity of fingers placed on the pads. Select that option for an oscillator by pushing the related toggel switch down. The pads are also slightly pressure sensitive. So the CV level can be controlled by pressure, but also by the size of the area covered by the fingers. The set of pads on the left are controlling the left two oscillators, the pads on the right are for the other two oscillators on the right.
+##### Modulation Option 1: Touch Pads
+There are two touch pad sections at the bottom of the front panel, which are based on a simple mechanism using the conductivity of fingers placed on the pads. Select that option for an oscillator by pushing the related toggle switch down. The pads are also slightly pressure sensitive. So the CV level can be controlled by pressure, but also by the size of the area covered by the fingers. The set of pads on the left are controlling the left two oscillators, the pads on the right are for the other two oscillators on the right.
 
-##### Internal Modulation
-Pushing the modulation option switch up, will cause the VCA of the related oscillator volume to be modulated by a certain pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator.
+##### Modulation Option 2: Internal Modulation
+Pushing the modulation option switch up, will cause the VCA of the related oscillator to be modulated by a certain pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator.
 
-##### External CV
+##### Modulation Option 3: External CV
 There is a CV input for each oscillator section. Touch pad and internal CV are normalled to this input. I.e. as long as there is a cable plugged in to the CV input, the only VCA modulation will be from an external source.
+The setting of the modulation option toggle switch will have no influence in this case.
 
 #### BIAS Knob
 The BIAS knob provides a CV offset option for the VCA modulation. This is applied to any of the above described options.
 You can turn down the output from any oscillator separately with the BIAS turned to minimum and no CV signal added.
 
 #### FILTER Knob
-The FILTER knob is only functional in case the selected waveform of an oscillator is the squarewave. In that case, it is serving as a simple low-pass filter, morphing the squarewave into a shark fin.
+The FILTER knob is to control the cutoff frequency of a simple low-pass filter with no resonance.
 
 #### VOLUME Knob
 The volume knob is controlling the overall amplitude of the combined drone output.
 
 #### OUT
-The combined output of all four oscillators.
+The combined audio signal from all four oscillators.
 
 ## Module Build and PCBs
 I added two different versions for the control board in the folder GerberFiles, an "original", and a "Thonk" version.
 Reason is that for my own module, I am using specific potentiometers - 16K4 series from Supertech Electronics - and 3.5mm jack sockets - MJ-355 from Marushin - available at my local electronics shop.
 
-<img width="300" alt="CtrlPCB_Orig" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/570a5092-40ef-4383-aa0a-49949861efb9">
+<img width="300" alt="CtrlPCB_Orig" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/6d5f66f0-df1e-456d-99fb-ebffee6e8591">
 
 However, since most DIY projects for Eurorack modules out there are using potentiometers from ALPHA and so-called THONKICONN jacks, as they are provided by Thonk in the UK, I also created another control board PCB for the "Thonk" version with footprints for those components.
 
-<img width="300" alt="CtrlPCB_Thonk" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/c0268639-778e-4047-940f-73d811d0c906">
+<img width="300" alt="CtrlPCB_Thonk" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/c2f4da12-2cad-40b1-a669-3ec474cc350c">
 
 The main PCB is the same for both versions.
 
-<img width="300" alt="MainPCB" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/c1373d8f-c7fe-41b2-95e6-16e47d34d4c2">
+<img width="300" alt="MainPCB" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/cc099378-eeb6-4b28-9ef5-f82ec188f347">
 
 I created the Gerber files with the online tool EasyEDA and ordered the PCBs at JLCPCB.
 
@@ -103,28 +105,28 @@ Therefore, this module requires a front panel manufactured as a PCB, not e.g. an
 The Gerber file for that panel is available in the GerberFiles folder.
 
 The connections for each touch pad with the control PCB are at the panel backside.
-In order to connect them to the control board, you have to use a 1x5 L-shaped male header, soldered on the backside surface and fitting to a corresponding 1x5 female header on the control board.
+In order to connect them to the control board frontside, you have to use a 1x5 L-shaped male header, soldered on the backside surface and fitting to a corresponding 1x5 female header on the control board.
 
 I suggest the following sequence for assembling the front panel and all control parts, and soldering the touch pad connections.
-1. Solder the 5-pin female header to the control board, before mounting any other control parts.
-<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/e9f8ed89-e014-4bb7-8960-4254276c41e5">
+1. First finish soldering all parts on the backside of the control PCB, but not yet the control parts (pots, jack sockets, switches, LEDs).
+2. Solder the 5-pin female header to the control board, before mounting any other control parts.
+<img width="400" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/e9f8ed89-e014-4bb7-8960-4254276c41e5">
 
-2. Stick on the four ON-ON toggle switches at the upper row of the control board without soldering them.
-3. Stick on the L-shaped male header to the female header on the control board.
-<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/38f72cde-c15b-4752-819f-fe04549c2511">
+3. Stick on the four ON-ON toggle switches at the upper row of the control board without soldering them.
+4. Stick on the L-shaped male header to the female header on the control board.
+<img width="400" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/38f72cde-c15b-4752-819f-fe04549c2511">
 
-4. Put on the front panel and fix the four toggle switches with screws to the front panel.
-<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/69aa4c0d-e5ec-44ce-b7de-616c2267384e">
+5. Put on the front panel and fix the four toggle switches with screws to the front panel.
+<img width="400" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/69aa4c0d-e5ec-44ce-b7de-616c2267384e">
 
 You can see in the picture that the control board and the front panel are not exactly parallel, because the headers connecting the touch pads are slightly higher than the other parts connecting to the front panel.
 
-5. Check the position of the L-shaped header on the backside of the front panel and gently twist the control PCB until the header pins fit to the solder pads.
+6. Check the position of the L-shaped header on the backside of the front panel and gently twist it against the control PCB until the header pins fit to the solder pads.
    Then solder the header pins to the front panel.
-<img height="300" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/09f35f1b-4e27-4718-ac10-771c0cfce7b1">
+<img width="400" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/09f35f1b-4e27-4718-ac10-771c0cfce7b1">
 
-6. Solder the four toggle switches to the control board PCB.
-7. Remove the front panel carefully in order to place all other switches, jacks and pots.
-8. Put the front panel back on. Make sure that the headers between the front panel and the control board for the touch pads are connected.
-9. Fix all parts at the front panel with nuts.
-10. Solder all parts on the control board.
-
+7. Solder the four toggle switches to the control board PCB.
+8. Remove the front panel carefully in order to place all other switches, jacks, pots and LEDs.
+9. Put the front panel back on. Make sure that the headers between the front panel and the control board for the touch pads are connected.
+10. Fix all parts at the front panel with nuts.
+11. Solder all parts on the control board.
