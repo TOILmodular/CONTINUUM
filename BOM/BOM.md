@@ -54,17 +54,26 @@ All those values have been chosen just via breadboard tests.
 The LEDs in my module, for which those resistor values work out ok, are blue ones (470nm, forward voltage 3.1V, current 35mA, product number OSB5DL3E34B).
 
 You might have to play around with those resistor values, depending on the used LEDs and the desired brightness differences.
-The resistors connected between the incoming CV signal from the VCA and the LEDs can be found on the control PCB in four groups with five resistors above the line of LEDs and other resistors with values 20K (e.g. R46 in the schematic) - 20K (R47) - 10K (R48) - 20K (R49) - 20K (R50) for one oscillator.
+
+<img width="233" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/7e90ba08-6317-4c5b-a54e-30b074de8120">
+
+The resistors between the incoming CV signal from the VCA and the LEDs can be found on the control PCB in four groups with five resistors above the line of LEDs with values 20K (e.g. R46 in the schematic) - 20K (R47) - 10K (R48) - 20K (R49) - 20K (R50) for one oscillator.
+
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/eb47e263-8093-47ec-84a6-fa16b65028bd">
 
 There is another resistor connected between each LED and the -12V power supply.
 The values for those resistors in each group are 47K (e.g R51) - 47K (R52) - 22K (R53) - 47K (R54) - 47K (R55).
 You will find those resistors on the right side of each LED on the control PCB.
 
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/f674f779-55f1-4751-bcb9-1444b6d48a52">
+
 Finally, there is one more resistor between each LED and ground.
 The five values for that resistor in each group are 47K (e.g. R136) - 470K (R135) - 470K (R134) - 470K (R57) - 47K (R56).
 Those resistors are on the left side of each LED on the PCB.
 
-I decided to use resistors only, and no transistors (which I guess would ne the usual way to control LEDs), because I wanted to have some control over the LED brightness, depending on the CV - and therefore the volume - of each oscillator.
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/e406a704-17ce-4738-9899-5cb3c95d86d5">
+
+I decided to use resistors only, and no transistors (which I guess would be the usual way to control LEDs), because I wanted to have some control over the LED brightness, depending on the CV - and therefore the volume - of each oscillator.
 There might be a more elegant way to do that, but I wanted to keep the design simple in terms of used components.
 This combination of resistors for incoming CV, additional negative voltage (the CV controlling the VCA in the AS2164 is actual negative), and ground turned out to get the right amount of current for the desired effect.
 Disadvantage is that the values will not be the right ones for other LEDs.
