@@ -9,7 +9,7 @@ This Eurorack module provides a drone from four oscillators with volume modulati
 - Triangle or squarewave selection
 - Three different volume modulation options - external, internal (irregular, cyclic via LFO combinations), or touch pads at the front panel
 - Volume indicators via LEDs for each oscillator
-- Simple low-pass filter
+- Simple passive low-pass filters for each oscillator
 - Volume control for the summed up output signal
 - Module width 26HP
 
@@ -54,7 +54,7 @@ You can turn down the output from any oscillator separately with the BIAS turned
 Or you can ensure to have a constant tone with slight volume modulation on top by increasing the bias to a certain amount.
 
 #### FILTER Knob
-The FILTER knob is to control the cutoff frequency of a simple low-pass filter with no resonance.
+The FILTER knob is to control the cutoff frequency of a simple passive low-pass filter with no resonance.
 
 #### VOLUME Knob
 The volume knob is controlling the overall amplitude of the combined drone output.
@@ -68,15 +68,15 @@ The combined audio signal from all four oscillators.
 I added two different versions for the control board in the folder GerberFiles, an "Original", and a "Thonk" version.
 Reason is that for my own module, I am using specific potentiometers - 16K4 series from Supertech Electronics - and 3.5mm jack sockets - MJ-355 from Marushin - available at my local electronics shop.
 
-<img width="300" alt="CtrlPCB_Orig" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/6d5f66f0-df1e-456d-99fb-ebffee6e8591">
+<img width="300" alt="CtrlPCB_Orig" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/c098f5e1-8d5e-4a9e-874e-4ce69e2a1384">
 
 However, since most DIY projects for Eurorack modules out there are using potentiometers from ALPHA and so-called THONKICONN jacks, as they are provided by Thonk in the UK, I also created another control board PCB for the "Thonk" version with footprints for those components.
 
-<img width="300" alt="CtrlPCB_Thonk" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/c2f4da12-2cad-40b1-a669-3ec474cc350c">
+<img width="300" alt="CtrlPCB_Thonk" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/7407211b-bb3d-4ddc-9a96-8bd26ed4a077">
 
 The main PCB is the same for both versions.
 
-<img width="300" alt="MainPCB" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/cc099378-eeb6-4b28-9ef5-f82ec188f347">
+<img width="300" alt="MainPCB" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/14a2d77e-8bc3-4a48-a3fd-768e2b902dcf">
 
 I created the Gerber files with the online tool EasyEDA and ordered the PCBs at JLCPCB.
 
@@ -84,25 +84,25 @@ I created the Gerber files with the online tool EasyEDA and ordered the PCBs at 
 The module build is mainly THT, including all ICs.
 However, there are a number SMD capacitors with the package size 1608 (imperial 0603).
 
-For the "Original" version two of the IC sockets on the control board need to be soldered in a specific way, as described in the next section. For the "Thonk" version, all sockets are to be soldered the usual way.
+For the "Original" version one of the IC sockets on the control board needs to be soldered in a specific way, as described in the next section. For the "Thonk" version, all sockets are to be soldered the usual way.
 
 Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider that fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
 
 ## Soldering IC Sockets on Control Board (only valid for the "Original" PCB version!)
 The following information is not relevant, if you are using the "Thonk" version PCBs.
 
-There are two IC sockets to be soldered on the control board in a special way, although the ICs themselves are THT.
-Due to space reasons, there are no holes for the IC sockets.
+There is one 8-pin IC socket to be soldered on the control board in a special way, although the TL071 IC themself is THT.
+Due to space reasons, there are no holes for the IC socket.
 The socket legs need to be soldered to the PCB surface, like SMD components.
 
-In order to do that, you need to use the type of sockets, where the legs can be bent, NOT the ones with stiff round legs!
+In order to do that, you need to use the type of socket, where the legs can be bent, NOT the one with stiff round legs!
 
-<img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/440ea4bd-f64a-49aa-b3e9-e93ae8265c44">
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/fe262cfd-d46b-4282-a18c-44e215a4d713"> 
 
 All socket legs need to be bent to the outside, so they can be put flat onto the PCB. Soldering the socket to the board is very easy, since the legs and the space inbetween are big compared to real SMD components.
 
-<img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/437a25b2-b9cc-4be9-bf65-0ad2c10efac4">
-<img width="500" src="https://github.com/TOILmodular/GARGLER/assets/97026614/31184858-4c74-43f4-b11a-abf582f29de1">
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/b4e5d8eb-5811-49a1-ae51-4d7d5a5b1c87">
+<img width="500" src="https://github.com/TOILmodular/CONTINUUM/assets/97026614/4fc33774-cd28-461e-a873-f55f07a589dd">
 
 All other sockets on the control board and the ones on the main board are to be soldered the usual THT way.
 
