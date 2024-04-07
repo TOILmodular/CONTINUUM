@@ -43,7 +43,7 @@ The sensitivty of the pads is very much depending on how wet your fingers are.
 If you wet your fingers slightly, the volume of the oscillators is increasing much faster, than with dry fingers.
 
 ##### Modulation Option 2: Internal Modulation
-Pushing the modulation option switch up, will cause the VCA of the related oscillator to be modulated by a certain pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator.
+Pushing the modulation option switch up, will cause the VCA of the related oscillator to be modulated by a certain pattern created by the combination of two internal LFOs with different rates. That pattern is different for each oscillator, as the module contains four separate LFOs with different fixed rates.
 
 ##### Modulation Option 3: External CV
 There is a CV input for each oscillator section. Touch pad and internal CV are normalled to this input. I.e. as long as there is a cable plugged in to the CV input, the only VCA modulation will be from an external source.
