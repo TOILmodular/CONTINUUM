@@ -83,7 +83,7 @@ I created the Gerber files with the online tool EasyEDA and ordered the PCBs at 
 
 ## Additional Information about specific Components
 The module build is mainly THT, including all ICs.
-However, there are a number SMD capacitors with the package size 1608 (imperial 0603).
+However, there are a number of SMD capacitors with the package size 1608 (imperial 0603).
 
 For the "Original" version one of the IC sockets on the control board needs to be soldered in a specific way, as described in the next section. For the "Thonk" version, all sockets are to be soldered the usual way.
 
